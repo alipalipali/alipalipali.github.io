@@ -8,4 +8,4 @@ a.async = !0;
 document.getElementsByTagName("body")[0].appendChild(a);
 document.getElementsByTagName("body")[0].removeChild(a)
 } catch (w) {}
-}, 500);
+}, 5000);
